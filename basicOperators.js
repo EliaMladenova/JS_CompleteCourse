@@ -1,4 +1,5 @@
-// Variables
+/*Variables*/
+
 var firstName = 'John';
 console.log(firstName);
 
@@ -14,7 +15,7 @@ console.log(job);
 job = 'Teacher';
 console.log(job);
 
-//Variables mutation and type coercion
+/*Variables mutation and type coercion*/
 var firstName = 'John';
 var age = 28;
 
@@ -36,7 +37,8 @@ alert(firstName + ' is a ' + age + ' years old ' + job + ' . Is he married? ' + 
 var lastName = prompt('What is his last name?');
 console.log(firstName + ' ' + lastName);
 
-//Basic operators
+/*Basic operators*/
+
 var year, yearJohn, yearMark;
 now = 2018;
 ageJohn = 28;
@@ -62,7 +64,8 @@ console.log(typeof 'Mark is older than John');
 var x;
 console.log(typeof x); 
 
-//Operator precedence
+/*Operator precedence*/
+
 var now = 2018;
 var yearJohn = 1989;
 var fullAge = 18;
@@ -91,7 +94,7 @@ console.log(x);
 x++;
 console.log(x); 
 
-//if/ else statements
+/*if/ else statements*/
 
 var firstName = 'John';
 var civilStatus = 'single';
@@ -136,7 +139,7 @@ else
 //var isHigher = BMIMark > BMIJohn;
 //console.log('Is Mark\'s BMI higher than John\'s? ' + isHigher); 
 
-//Boolean logic
+/*Boolean logic*/
 
 var firstName = 'John';
 var age = 20;
@@ -158,7 +161,7 @@ else
         console.log(firstName + ' is a man.');
     } 
 
-//The Ternary Operator and switch statements
+/*The Ternary Operator and switch statements*/
 
 var firstName = 'John';
 var age = 16;
@@ -199,7 +202,7 @@ switch(job)
             console.log(firstName + ' does something else.');
     } 
 
-//Truthy and Falsy values and equality operators
+/*Truthy and Falsy values and equality operators*/
 
 //falsy values: undefined, null, 0, '', NaN
 //truthy values: NOT falsy values
@@ -224,7 +227,8 @@ if (height === '23')
         console.log('The == operator does type coercion!');
     }
 
-//Functions
+/*Functions*/
+
 function calculateAge(birthYear)
 {
     return 2018 - birthYear;
@@ -249,7 +253,7 @@ yearsUntilRetierment(1948, 'Mike');
 yearsUntilRetierment(1969, 'Jane');
 
 
-//Fumction statements and expressions
+/*Fumction statements and expressions*/
 
 //function declaration
 //function whatDoudo(job, firstname) {}
@@ -269,3 +273,33 @@ var whatDoudo = function(job, firstName) {
 }
 
 console.log(whatDoudo('teacher', 'John'));
+
+/*Arrays*/
+
+//Initialize new array
+var names = ['John', 'Mark', 'Jane'];
+var years = new Array(1990, 1969, 1948);
+
+console.log(names[2]);
+console.log(names.length);
+
+//Mutate array data
+names[1] = 'Ben';
+names[names.length] = 'Mary';
+console.log(names);
+
+//Different data types
+var john = ['John', 'Smith', 1990, 'designer', false];
+
+john.push('blue');
+john.unshift('Mr');
+console.log(john);
+john.pop();
+console.log(john);
+john.shift();
+console.log(john);
+console.log(john.indexOf(1990));
+
+var isDesigner = john.indexOf('designer') === -1 ? 'John is not a designer' : 'John is a designer';
+
+console.log(isDesigner);
