@@ -1,5 +1,4 @@
-/* Lekciq 1 - variables
-
+// Variables
 var firstName = 'John';
 console.log(firstName);
 
@@ -16,7 +15,6 @@ job = 'Teacher';
 console.log(job);
 
 //Variables mutation and type coercion
-
 var firstName = 'John';
 var age = 28;
 
@@ -39,7 +37,6 @@ var lastName = prompt('What is his last name?');
 console.log(firstName + ' ' + lastName);
 
 //Basic operators
-
 var year, yearJohn, yearMark;
 now = 2018;
 ageJohn = 28;
@@ -226,7 +223,6 @@ if (height === '23')
     {
         console.log('The == operator does type coercion!');
     }
-*/
 
 //Functions
 function calculateAge(birthYear)
@@ -238,3 +234,38 @@ var ageJohn = calculateAge(1990);
 var ageMike = calculateAge(1948);
 var ageJane = calculateAge(1969);
 console.log(ageJohn, ageMike, ageJane);
+
+function yearsUntilRetierment(year, firstname)
+{
+    var age = calculateAge(year);
+    var retierment = 65 - age;
+    if (retierment > 0) {console.log(firstname + ' retiers in ' + retierment + ' years.') }
+    else {
+        console.log(firstname + ' is already retiered.') }
+    }
+
+yearsUntilRetierment(1990, 'John');
+yearsUntilRetierment(1948, 'Mike');
+yearsUntilRetierment(1969, 'Jane');
+
+
+//Fumction statements and expressions
+
+//function declaration
+//function whatDoudo(job, firstname) {}
+
+//function expression
+var whatDoudo = function(job, firstName) {
+    switch(job){
+        case 'teacher':
+            return firstName + ' teaches kids to code';
+        case 'driver':
+            return firstName + ' drives a cab in Lisbon';
+        case 'designer':
+            return firstName + ' designs beautiful websites';
+        default:
+            return firstName + ' does sth else.';
+    }
+}
+
+console.log(whatDoudo('teacher', 'John'));
